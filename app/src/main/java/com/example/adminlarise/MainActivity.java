@@ -1,27 +1,35 @@
 package com.example.adminlarise;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import com.example.adminlarise.MainActivity;
-
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
+
+import com.firebase.client.Firebase;
+import com.google.firebase.database.DatabaseReference;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Button psn_masuk;
+
+    public static final String Firebase_Server_URL = "https://larise-1234.firebaseio.com/";
+
+    // Declaring String variables to store name & phone number get from EditText.
+    String NameHolder, NumberHolder;
+
+    Firebase firebase;
+
+    DatabaseReference databaseReference;
+
+    // Root Database Name for Firebase Database.
+    public static final String Database_Path = "larise-1234";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +105,8 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.frameLayout, fragment);
             fragmentTransaction.commit();
+//            Intent intent = new Intent(MainActivity.this, PesananMasuk.class);
+//            startActivity(intent);
         } else if (id == R.id.nav_proses) {
             PesananProses fragment = new PesananProses();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();

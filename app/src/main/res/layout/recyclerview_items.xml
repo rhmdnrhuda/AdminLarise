@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Student Name: "
+            android:text="Layanan : "
             android:textColor="#000"
             android:textSize="20dp" />
 
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Phone Number: "
+            android:text="Biaya: "
             android:textColor="#000"
             android:textSize="20dp"
             android:layout_below="@+id/StudentName"

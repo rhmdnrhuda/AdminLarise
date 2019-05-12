@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "148422036442",
+    "firebase_url": "https://larise-1234.firebaseio.com",
+    "project_id": "larise-1234",
+    "storage_bucket": "larise-1234.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148422036442:android:27bf865c78f3a8d4",
+        "android_client_info": {
+          "package_name": "com.example.adminlarise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148422036442-utatnhtljic5omkhtqvj08acuvcu580l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adminlarise",
+            "certificate_hash": "7d4bab800c3cd13ddb2e78407da4c05219b33367"
+          }
+        },
+        {
+          "client_id": "148422036442-isgv2rkmoj0t3bivlhkg1lmuvue8dauu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2nI-Ul5L_ibFC-mHGN2AvkUOCC4F1RWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148422036442-isgv2rkmoj0t3bivlhkg1lmuvue8dauu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148422036442:android:dadf7c71b9cf7fc9",
+        "android_client_info": {
+          "package_name": "com.example.larise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148422036442-0bib8a8l5kcmc000usrne1p4dir294ss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.larise",
+            "certificate_hash": "f8200c09ed492c02ec8edb7ae44da3dc0f3f8083"
+          }
+        },
+        {
+          "client_id": "148422036442-5446bbinbabs16sblvuddqsom4jll119.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.larise",
+            "certificate_hash": "0eac43bc45c6194255aa921a5b897cc01f4ca352"
+          }
+        },
+        {
+          "client_id": "148422036442-isgv2rkmoj0t3bivlhkg1lmuvue8dauu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2nI-Ul5L_ibFC-mHGN2AvkUOCC4F1RWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148422036442-isgv2rkmoj0t3bivlhkg1lmuvue8dauu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

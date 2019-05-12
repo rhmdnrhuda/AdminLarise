@@ -38,7 +38,7 @@ public class PesananAdapter extends RecyclerView.Adapter<PesananAdapter.ViewHold
 
         holder.StudentNameTextView.setText(po.getNama());
 
-        holder.StudentNumberTextView.setText(po.getBiaya());
+        holder.StudentNumberTextView.setText(String.valueOf(po.getBiaya()));
 
     }
 

@@ -1,14 +1,22 @@
 package com.example.adminlarise;
 
+
 import java.io.Serializable;
 
 public class Pesanan implements Serializable {
+    public  String no;
     private String nama;
     private int biaya;
-    private boolean isOnChart;
-    private String no;
+    public boolean isOnChart;
 
-    public Pesanan(){}
+    public Pesanan() {
+    }
+
+
+    public Pesanan(String nama, int biaya) {
+        this.nama = nama;
+        this.biaya = biaya;
+    }
 
     public String getNama() {
         return nama;
@@ -26,19 +34,4 @@ public class Pesanan implements Serializable {
         this.biaya = biaya;
     }
 
-    public boolean isOnChart() {
-        return isOnChart;
-    }
-
-    public void setOnChart(boolean onChart) {
-        isOnChart = onChart;
-    }
-
-    public String getNo() {
-        return no;
-    }
-
-    public void setNo(String no) {
-        this.no = no;
-    }
 }

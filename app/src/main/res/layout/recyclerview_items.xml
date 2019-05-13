@@ -2,6 +2,7 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardview1"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
@@ -18,16 +19,7 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/StudentName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Layanan : "
-            android:textColor="#000"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/ShowStudentNameTextView"
+            android:id="@+id/nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -37,23 +29,12 @@
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/StudentName"
             android:layout_toEndOf="@+id/StudentName"
-            android:layout_marginLeft="19dp"
-            android:layout_marginStart="19dp" />
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            tools:ignore="UnknownId" />
 
         <TextView
-            android:id="@+id/StudentNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Biaya: "
-            android:textColor="#000"
-            android:textSize="20dp"
-            android:layout_below="@+id/StudentName"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:id="@+id/ShowStudentNumberTextView"
+            android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -62,10 +43,38 @@
             android:textSize="20dp"
             android:layout_marginLeft="11dp"
             android:layout_marginStart="11dp"
-            android:layout_below="@+id/ShowStudentNameTextView"
-            android:layout_toRightOf="@+id/StudentNumber"
-            android:layout_toEndOf="@+id/StudentNumber" />
+            android:layout_below="@+id/nama"
+            />
 
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Show Number"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_below="@+id/status"/>
+
+        <Button
+            android:id="@+id/proses"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="200dp"
+            android:textSize="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Proses" />
+
+        <Button
+            android:id="@+id/map"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="10dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="50dp"
+            android:text="Map" />
     </RelativeLayout>
 
 </android.support.v7.widget.CardView>

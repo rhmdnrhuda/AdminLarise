@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -13,20 +14,22 @@ public class PesananAdapter extends RecyclerView.Adapter<PesananAdapter.ViewHold
 
     Context context;
     List<PesananObjek> MainImageUploadInfoList;
-
+    Button set;
     public PesananAdapter(Context context, List<PesananObjek> TempList) {
 
         this.MainImageUploadInfoList = TempList;
 
         this.context = context;
     }
-
+    public void setSet(Button b){
+        this.set = b;
+    }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_items, parent, false);
 
-        ViewHolder viewHolder = new ViewHolder(view);
+        ViewHolder viewHolder = new ViewHolder(view,this.set);
 
         return viewHolder;
     }
@@ -36,9 +39,12 @@ public class PesananAdapter extends RecyclerView.Adapter<PesananAdapter.ViewHold
 
         PesananObjek po = MainImageUploadInfoList.get(position);
 
-        holder.StudentNameTextView.setText(po.getStatus());
+        holder.txtNama.setText(po.getKey());
+        holder.txtStatus.setText(po.getStatus());
+        holder.txtTotal.setText(String.valueOf(po.getTotal()));
+        holder.ubah.setText("Ubah Status");
+        holder.map.setText("Lihat Lokasi");
 
-        holder.StudentNumberTextView.setText(po.getPesanan().);
 
     }
 
@@ -48,18 +54,25 @@ public class PesananAdapter extends RecyclerView.Adapter<PesananAdapter.ViewHold
         return MainImageUploadInfoList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        public TextView StudentNameTextView;
-        public TextView StudentNumberTextView;
+        public TextView txtNama,txtStatus,txtTotal;
+        public Button ubah,map;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(View itemView,Button set) {
 
             super(itemView);
 
-            StudentNameTextView = (TextView) itemView.findViewById(R.id.ShowStudentNameTextView);
+            txtNama = itemView.findViewById(R.id.nama);
+            txtStatus = itemView.findViewById(R.id.status);
+            txtTotal = itemView.findViewById(R.id.total);
+            ubah = itemView.findViewById(R.id.proses);
+            map= itemView.findViewById(R.id.map);
+        }
 
-            StudentNumberTextView = (TextView) itemView.findViewById(R.id.ShowStudentNumberTextView);
+        @Override
+        public void onClick(View v) {
+            Global.updateStatus(Global.po.);
         }
     }
 }

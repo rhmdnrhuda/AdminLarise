@@ -1,6 +1,5 @@
 package com.example.adminlarise;
 
-import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -12,11 +11,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Global {
     public static DatabaseReference db = FirebaseDatabase.getInstance().getReference();
-    static final ArrayList<PesananObjek> p = new ArrayList<>();
+    static final ArrayList<PesananObjek> po = new ArrayList<>();
     static final ArrayList<String> Key = new ArrayList<>();
     public static void setListener() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
@@ -28,7 +26,7 @@ public class Global {
                 for (DataSnapshot single : dataSnapshot.getChildren()) {
                     Log.e("MASUK", dataSnapshot.getKey());
                     Key.add(dataSnapshot.getKey());
-                    po.put(single.getKey(),single.getValue(PesananObjek.class));
+                    po.add(single.getValue(PesananObjek.class));
                 }
 
             }

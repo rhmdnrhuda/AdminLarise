@@ -1,9 +1,6 @@
 package com.example.adminlarise;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -16,30 +13,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
-import com.firebase.client.Firebase;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Button psn_masuk;
 
     public static final String Firebase_Server_URL = "https://larise-1234.firebaseio.com/";
 
-    // Declaring String variables to store name & phone number get from EditText.
-    String NameHolder, NumberHolder;
 
-    Firebase firebase;
-
-    DatabaseReference databaseReference;
-
-    // Root Database Name for Firebase Database.
-    public static final String Database_Path = "larise-1234";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +30,7 @@ public class MainActivity extends AppCompatActivity
 
         Global.setListener();
         Home fragment = new Home();
+
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
@@ -100,7 +81,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-
+            Home fragment = new Home();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_masuk) {
             PesananMasuk fragment = new PesananMasuk();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -114,7 +98,10 @@ public class MainActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.frameLayout, fragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_riwayat) {
-
+            PesananRiwayat fragment = new PesananRiwayat();
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frameLayout, fragment);
+            fragmentTransaction.commit();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

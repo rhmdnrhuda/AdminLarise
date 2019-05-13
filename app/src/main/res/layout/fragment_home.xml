@@ -4,11 +4,110 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECEFF1"
+        android:padding="10dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/menu_home" />
+        <TextView
+            android:id="@+id/ininama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jumlah Pesanan Masuk"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/StudentName"
+            android:layout_toEndOf="@+id/StudentName"
+            android:layout_marginStart="11dp"
+            tools:ignore="UnknownId" />
+        <TextView
+            android:id="@+id/pesananMasuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jumlah Tidak Tersedia"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/nama"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            tools:ignore="UnknownId" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECEFF1"
+        android:padding="10dp"
+        android:layout_marginTop="100dp">
 
+        <TextView
+            android:id="@+id/proses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jumlah Pesanan On Progres"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/StudentName"
+            android:layout_toEndOf="@+id/StudentName"
+            android:layout_marginStart="11dp"
+            tools:ignore="UnknownId" />
+        <TextView
+            android:id="@+id/pesananProses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jumlah Tidak Tersedia"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/nama"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            tools:ignore="UnknownId" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ECEFF1"
+        android:padding="10dp"
+        android:layout_marginTop="200dp">
+
+        <TextView
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jumlah Pesanan Selesai"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/StudentName"
+            android:layout_toEndOf="@+id/StudentName"
+            android:layout_marginStart="11dp"
+            tools:ignore="UnknownId" />
+        <TextView
+            android:id="@+id/pesananHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jumlah Tidak Tersedia"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_below="@+id/nama"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            tools:ignore="UnknownId" />
+
+    </RelativeLayout>
 </FrameLayout>

@@ -72,7 +72,7 @@ public class PesananAdapter extends RecyclerView.Adapter<PesananAdapter.ViewHold
 
         @Override
         public void onClick(View v) {
-            Global.updateStatus(Global.po.);
+//            Global.updateStatus();
         }
     }
 }

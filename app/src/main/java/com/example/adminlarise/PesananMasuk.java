@@ -3,25 +3,16 @@ package com.example.adminlarise;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
 import com.firebase.client.Firebase;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +46,7 @@ public class PesananMasuk extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View fView = inflater.inflate(R.layout.fragment_pesanan_masuk, container, false);
 
         Firebase.setAndroidContext(getActivity());
@@ -71,6 +63,17 @@ public class PesananMasuk extends Fragment {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
         progressDialog.setMessage("Loading Data from Firebase Database");
         progressDialog.show();
+
+        for(int i=0; i<Global.po.size();i++){
+            if(Global.po.get(i).getStatus().equals("WAIT")){
+                list.add(Global.po.get(i));
+            }
+        }
+        adapter = new PesananAdapter(getActivity(), list);
+
+        recyclerView.setAdapter(adapter);
+
+        progressDialog.dismiss();
         return fView;
     }
 

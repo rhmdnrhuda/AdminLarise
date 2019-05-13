@@ -36,9 +36,9 @@ public class PesananAdapter extends RecyclerView.Adapter<PesananAdapter.ViewHold
 
         PesananObjek po = MainImageUploadInfoList.get(position);
 
-        holder.StudentNameTextView.setText(po.getNama());
+        holder.StudentNameTextView.setText(po.getStatus());
 
-        holder.StudentNumberTextView.setText(String.valueOf(po.getBiaya()));
+        holder.StudentNumberTextView.setText(po.getPesanan().);
 
     }
 

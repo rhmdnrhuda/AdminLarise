@@ -64,7 +64,7 @@ public class PesananProses extends Fragment {
         progressDialog.show();
 
         for(int i=0; i<Global.po.size();i++){
-            if(Global.po.get(i).getStatus().equals("PENDING")){
+            if(Global.po.get(i).getStatus().equals("WAIT")){
                 list.add(Global.po.get(i));
             }
         }

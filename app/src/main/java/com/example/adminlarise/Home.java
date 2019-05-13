@@ -35,9 +35,9 @@ public class Home extends Fragment {
         for(int i=0; i<Global.po.size();i++){
             if(Global.po.get(i).getStatus().equals("WAIT")){
                 Log.e("INI A", String.valueOf(a));
-                a++;
-            }else if(Global.po.get(i).getStatus().equals("PENDING")){
                 b++;
+            }else if(Global.po.get(i).getStatus().equals("PENDING")){
+                a++;
             }else{
                 c++;
             }

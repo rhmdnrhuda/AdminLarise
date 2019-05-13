@@ -58,19 +58,19 @@
             android:layout_marginStart="11dp"
             android:layout_below="@+id/status"/>
 
-        <Button
-            android:id="@+id/proses"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginLeft="200dp"
-            android:textSize="10dp"
-            android:layout_marginTop="20dp"
-            android:text="Proses" />
+        <!--<Button-->
+            <!--android:id="@+id/proses"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="200dp"-->
+            <!--android:textSize="10dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:text="Proses" />-->
 
         <Button
             android:id="@+id/map"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:textSize="10dp"
             android:layout_marginLeft="200dp"
             android:layout_marginTop="50dp"

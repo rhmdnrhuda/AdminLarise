@@ -16,6 +16,7 @@ public class Global {
     public static DatabaseReference db = FirebaseDatabase.getInstance().getReference();
     static final ArrayList<PesananObjek> po = new ArrayList<>();
     static final ArrayList<String> Key = new ArrayList<>();
+    static double longitude,latitude;
     public static void setListener() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 //        progressDialog.setMessage("Loading Data from Firebase Database");
@@ -27,6 +28,9 @@ public class Global {
                     Log.e("MASUK", dataSnapshot.getKey());
                     Key.add(dataSnapshot.getKey());
                     po.add(single.getValue(PesananObjek.class));
+                    Log.e("data", String.valueOf(po.get(po.size()-1).getLatitude()));
+                    Log.e("data", String.valueOf(po.get(po.size()-1).getLongitude()));
+
                 }
 
             }
